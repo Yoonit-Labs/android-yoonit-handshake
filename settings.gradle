@@ -1,0 +1,3 @@
+include ':yoonit-handshake'
+include ':app'
+rootProject.name = "handshakedemo"
