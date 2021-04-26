@@ -20,14 +20,17 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private val handshake: Handshake = Handshake(applicationContext,
-        "BEcTK0YpgYom5ifxUyX5yKDNUBaaLQpWxU361n+ihb5EAnKvABWde1P6lnZR3CR9ykrTLrO0ANdivFabS20iGOA=",
-        "https://y9ggj3nnv8.execute-api.us-east-1.amazonaws.com/v1/sslpinning",
-        handshakeListener
-    )
+    private lateinit var handshake: Handshake
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        this.handshake = Handshake(applicationContext,
+                BuildConfig.PUBLIC_KEY,
+                BuildConfig.URL,
+                handshakeListener
+        )
 
         update_fingerprint.setOnClickListener { handshake.updateFingerptints() }
     }

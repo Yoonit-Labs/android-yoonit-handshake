@@ -15,8 +15,15 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("local.properties").newDataInputStream())
+        def url = properties.getProperty("service.url", "")
+        def publicKey = properties.getProperty("public.key", "")
+
+        buildConfigField "String", "URL", url
+        buildConfigField "String", "PUBLIC_KEY", publicKey
     }
 
     buildTypes {
