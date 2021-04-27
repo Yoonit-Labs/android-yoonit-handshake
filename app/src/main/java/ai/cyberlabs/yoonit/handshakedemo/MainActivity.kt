@@ -26,12 +26,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        this.handshake = Handshake(applicationContext,
-                BuildConfig.PUBLIC_KEY,
-                BuildConfig.URL,
-                handshakeListener
-        )
+        this.handshake = Handshake(applicationContext, handshakeListener)
 
-        update_fingerprint.setOnClickListener { handshake.updateFingerptints() }
+        update_fingerprint.setOnClickListener { handshake.updateFingerprint(BuildConfig.PUBLIC_KEY, BuildConfig.URL,) }
     }
 }

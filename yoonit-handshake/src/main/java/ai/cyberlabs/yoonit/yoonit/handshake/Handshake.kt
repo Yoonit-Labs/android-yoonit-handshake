@@ -9,25 +9,22 @@ import com.wultra.android.sslpinning.integration.powerauth.powerAuthCertStore
 import java.net.URL
 
 
-class Handshake(context: Context,
-                publicKey: String,
-                serviceUrl: String,
-                handshakeListener: HandshakeListener) {
+class Handshake(context: Context, handshakeListener: HandshakeListener) {
 
     private val myContext = context
 
     private val listener = handshakeListener
 
-    private val publicKeyByteArray: ByteArray = Base64.decode(publicKey, Base64.NO_WRAP)
+    fun updateFingerprint( publicKey: String, serviceUrl: String) {
+        val publicKeyByteArray: ByteArray = Base64.decode(publicKey, Base64.NO_WRAP)
 
-    private val configuration = CertStoreConfiguration.Builder(
-            serviceUrl = URL(serviceUrl),
-            publicKey = publicKeyByteArray)
-            .build()
+        val configuration = CertStoreConfiguration.Builder(
+                serviceUrl = URL(serviceUrl),
+                publicKey = publicKeyByteArray)
+                .build()
 
-    private val certStore: CertStore = CertStore.powerAuthCertStore(configuration, myContext)
+        val certStore: CertStore = CertStore.powerAuthCertStore(configuration, myContext)
 
-    fun updateFingerptints() {
         certStore.update(UpdateMode.DEFAULT, object : DefaultUpdateObserver() {
             override fun continueExecution() {
                 // Certstore is likely up-to-date, you can resume execution of your code.
@@ -40,7 +37,6 @@ class Handshake(context: Context,
                     listener.continueExecution()
                     return
                 }
-
                 listener.handleFailedUpdate(type.name, type.isPerformingUpdate, result.name)
             }
         })
