@@ -1,4 +1,4 @@
-package ai.cyberlabs.yoonit.yoonit.handshake
+package com.yoonit.handshakedemo
 
 interface HandshakeListener {
     fun continueExecution()

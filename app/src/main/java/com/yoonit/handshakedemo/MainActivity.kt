@@ -1,7 +1,5 @@
-package ai.cyberlabs.yoonit.handshakedemo
+package com.yoonit.handshakedemo
 
-import ai.cyberlabs.yoonit.yoonit.handshake.Handshake
-import ai.cyberlabs.yoonit.yoonit.handshake.HandshakeListener
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package ai.cyberlabs.yoonit.yoonit.handshake
+package com.yoonit.handshakedemo
 
 import android.content.Context
 import android.util.Base64

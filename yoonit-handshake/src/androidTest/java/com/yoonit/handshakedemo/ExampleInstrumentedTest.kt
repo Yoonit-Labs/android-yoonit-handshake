@@ -1,4 +1,4 @@
-package ai.cyberlabs.yoonit.yoonit.handshake
+package com.yoonit.handshakedemo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

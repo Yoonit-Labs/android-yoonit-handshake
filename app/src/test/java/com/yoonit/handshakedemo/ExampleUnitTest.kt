@@ -1,4 +1,4 @@
-package ai.cyberlabs.yoonit.handshakedemo
+package com.yoonit.handshakedemo
 
 import org.junit.Test
 
