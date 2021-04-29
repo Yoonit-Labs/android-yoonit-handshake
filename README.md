@@ -37,7 +37,7 @@ dependencies {
 ```
 
 > ### Special thanks and credits...
-> The current version of the library depends on `[Wultra SSL Pinning]`(https://github.com/wultra/ssl-pinning-ios)
+> The current version of the library depends on `[Wultra SSL Pinning]`(https://github.com/wultra/ssl-pinning-android)
 
 ## Usage
 
