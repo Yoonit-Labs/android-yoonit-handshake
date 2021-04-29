@@ -86,14 +86,13 @@ class MainActivity : AppCompatActivity() {
 
 ### Handshake Result
 
-| HandshakeResult      | Description
+| UpdateResult      | Description
 | -                    | -
-| OK                   | <ul><li>Everything is OK;</li><li>No Action is required;</li></ul>
-| STORE_IS_EMPTY       | <ul><li>The update request succeeded;</li><li>Result is still an empty list of certificates;</li><li>May loading & validating of remote data succeeded;</li><li>All loaded certificates are already expired;</li><li>All loaded certificates are already expired;</li></ul>
-| NETWORK_ERROR        | The update request failed on a network communication. 
-| INVALID_DATA         | The update request returned the data which did not pass the signature validation.
-| INVALID_SIGNATURE    | The update request returned the data which did not pass the signature validation.
-| INVALID_URL_SERVICE  | The url service does not exist or is invalid.
+| OK                   | <ul><li>Update succeeded;</li><li>No Action is required;</li></ul>
+| STORE_IS_EMPTY       | <ul><li>[CertStore] is empty;</li><li>There's no valid certificate fingerprint to validate server cert against;</li><li>Might happen when all the certificate fingerprints are already expired;</li><li>All loaded certificates are already expired;</li>
+| NETWORK_ERROR        | There was an error in network communication with the server. 
+| INVALID_DATA         | The update request returned invalid data from the server.
+| INVALID_SIGNATURE    | The update request returned data which did not pass the signature validation.
 
 ## To contribute and make it better
 
