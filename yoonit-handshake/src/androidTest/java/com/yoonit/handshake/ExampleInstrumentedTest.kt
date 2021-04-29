@@ -1,4 +1,4 @@
-package com.yoonit.handshakedemo
+package com.yoonit.handshake
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

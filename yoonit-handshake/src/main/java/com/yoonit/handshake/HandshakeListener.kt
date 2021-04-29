@@ -1,4 +1,4 @@
-package com.yoonit.handshakedemo
+package com.yoonit.handshake
 
 interface HandshakeListener {
     fun continueExecution()

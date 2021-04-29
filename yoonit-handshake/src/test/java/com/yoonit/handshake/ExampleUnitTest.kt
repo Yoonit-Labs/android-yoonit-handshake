@@ -1,4 +1,4 @@
-package com.yoonit.handshakedemo
+package com.yoonit.handshake
 
 import org.junit.Test
 
